@@ -4,16 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --open --port 3000 --contentBase src --hot"
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "dev": "webpack-dev-server --open --port 3000 --contentBase src --hot --host 202.199.6.64"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "axios": "^0.18.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-component": "^0.10.1",
+    "babel-plugin-transform-remove-strict-mode": "^0.0.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
@@ -22,6 +24,7 @@
     "html-webpack-plugin": "^2.30.1",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
+    "mint-ui": "^2.2.13",
     "mui": "^0.0.1",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
@@ -36,7 +39,9 @@
     "bootstrap": "^3.3.7",
     "jquery": "^3.4.1",
     "mint-ui": "^2.2.13",
+    "moment": "^2.24.0",
     "vue": "^2.5.2",
+    "vue-preview": "^1.0.5",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1",
     "webpack": "^3.8.1"
