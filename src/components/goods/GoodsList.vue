@@ -76,6 +76,7 @@ export default {
       // 2. 传递对象
       // this.$router.push({ path: "/home/goodsinfo/" + id })
       // 3. 传递命名的路由
+      // console.log(this)
       this.$router.push({ name: "goodsinfo", params: { id } })
     }
   }

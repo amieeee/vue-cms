@@ -1,7 +1,13 @@
 <template>
 	<div class="app-container">
 		<!-- 第一部分 顶部 Header 区域 -->
-		<mt-header fixed title="东北大学·Vue项目"></mt-header>
+		<!-- <mt-header fixed title="东北大学·Vue项目"></mt-header> -->
+		<mt-header fixed title="东北大学·Vue项目">
+			<router-link to="" slot="left" v-show="flag">
+				<!-- @click.native="$router.back(-1) -->
+				<mt-button icon="back" @click="goBack">返回</mt-button>
+			</router-link>
+		</mt-header>
 		<!-- 第二部分 中间路由 router-view 区域 -->
 		<transition>
 			<router-view></router-view>
@@ -16,8 +22,8 @@
 				<span class="mui-icon mui-icon-contact"></span>
 				<span class="mui-tab-label">会员</span>
 			</router-link>
-			<router-link class="mui-tab-item-llb" to="shopcar">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">0</span></span>
+			<router-link class="mui-tab-item-llb" to="/shopcar">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge" id="badge">{{ $store.getters.getAllCount }}</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item-llb" to="/search">
@@ -29,9 +35,36 @@
 </template>
 
 <script>
-import {Toast} from 'mint-ui'
+import { Toast } from 'mint-ui'
 export default {
-
+	data() {
+		return {
+			flag: false,
+		}
+	},
+	created() {
+		// if (this.$route.path === '/home') {
+		// 	this.flag = false
+		// } else {
+		// 	this.flag = true
+		// }
+		this.flag = this.$route.path === '/home' ? false : true
+	},
+	methods: {
+		goBack() {
+			this.$router.go(-1)
+			// this.$router.back()
+		},
+	},
+	watch: {
+		'$route.path': function (newVal) {
+			if (newVal === '/home') {
+				this.flag = false
+			} else {
+				this.flag = true
+			}
+		}
+	}
 }
 </script>
 

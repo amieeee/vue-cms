@@ -14,3 +14,6 @@
   3. git push origin master
 `
 
+### mint-ui 返回上一页
+@click.native="$router.back(-1)"
+
