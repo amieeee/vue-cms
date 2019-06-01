@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 import HomeContainer from './components/tabbar/HomeContainer.vue'
 import MemberContainer from './components/tabbar/MemberContainer.vue'
 import ShopcarContaineror from './components/tabbar/ShopcarContainer.vue'
-import SearchContainer from './components/tabbar/SearchContainer.vue'
+import SettingContainer from './components/tabbar/SettingContainer.vue'
 
 import NewsList from './components/news/NewsList.vue'
 import NewsInfo from './components/news/NewsInfo.vue'
@@ -21,7 +21,7 @@ let router = new VueRouter({
     { path: '/home', component: HomeContainer},
     { path: '/member', component: MemberContainer},
     { path: '/shopcar', component: ShopcarContaineror},
-    { path: '/search', component: SearchContainer},
+    { path: '/setting', component: SettingContainer},
     { path: '/home/newslist', component: NewsList},
     { path: '/home/newsinfo/:id', component: NewsInfo},
     { path: '/home/photolist', component: PhotoList},

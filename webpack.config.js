@@ -30,7 +30,7 @@ module.exports = {
       { test: /\.css$/, use: ['style-loader', 'css-loader'] }, //  配置处理 .css 文件的第三方loader 规则
       { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] }, //配置处理 .less 文件的第三方 loader 规则
       { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] }, // 配置处理 .scss 文件的 第三方 loader 规则
-      { test: /\.(jpg|png|gif|bmp|jpeg)$/, use: 'url-loader?limit=7631&name=[hash:8]-[name].[ext]'}, // 处理图片路径的 loader 
+      { test: /\.(jpg|png|gif|bmp|jpeg)$/, use: 'url-loader?limit=8500&name=[hash:8]-[name].[ext]'}, // 处理图片路径的 loader 
       { test: /\.(ttf|eot|svg|woff|woff2)$/, use: 'url-loader'},
       { test: /\.js$/, use: 'babel-loader' , exclude: /node_modules/},
       { test: /.vue$/, use: 'vue-loader' }

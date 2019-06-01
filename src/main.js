@@ -27,9 +27,11 @@ import VueResource from 'vue-resource'
 // 2.2 安装 vue-resource
 Vue.use(VueResource)
 // 2.3 设置请求根路径
-Vue.http.options.root = 'http://www.liulongbin.top:3005'
+Vue.http.options.root = 'http://www.liulongbin.top:3005/'
+// 
 // 全局设置 post 时候表单数据格式组织形式   application/x-www-form-urlencoded
 Vue.http.options.emulateJSON = true
+
 
 // 3.1 定义全局过滤器
 // 导入格式化时间的插件
